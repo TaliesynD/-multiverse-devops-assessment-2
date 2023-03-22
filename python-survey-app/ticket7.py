@@ -14,7 +14,7 @@ from ticket1 import getfile
 def output_script(fn:str):
     f = getfile(fn)
     for i in f:
-        print(f"{i.split(',')[0]:>3}" + "," + f"{i.split(',')[1]:<20}" + "," + f"{i.split(',')[2]:<20}" + "," + f"{i.split(',')[3]:<3}" + "," + f"{i.split(',')[4]:<1}" + "," + f"{i.split(',')[5]:<2}".rstrip())
+        print(f"{i.split(',')[0]:>7}" + "," + f"{i.split(',')[1]:<20}" + "," + f"{i.split(',')[2]:<20}" + "," + f"{i.split(',')[3]:<8}" + "," + f"{i.split(',')[4]:<8}" + "," + f"{i.split(',')[5]:>9}".rstrip())
 
-
+    return
         
