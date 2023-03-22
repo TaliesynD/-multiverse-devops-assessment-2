@@ -18,9 +18,9 @@ def test_rm_dups():
     prev = ''
     dupfound = 0
     for i in infile:
-        if i[0]==prev:
+        if i.split(',')[0]==prev:
             dupfound = 1
-        prev = i[0]
+        prev = i.split(',')[0]
     assert(dupfound == 0)
 
 # ticket 3 - Ignore empty lines
@@ -35,9 +35,9 @@ def test_capitalise_names():
     infile = ignore_empty(infile)
     infile = capitalise_names(infile)
     for l in infile:
-        print('---' + l[1] + '---')
-        m = str(l[1]).upper
-        n = str(l[1])
+        # print('---' + l[1] + '---')
+        m = str(l.split(',')[1]).upper()
+        n = str(l.split(',')[1])
         assert(n == m)
     
 # ticket 5 - Validate the responses to answer 3
@@ -46,8 +46,9 @@ def test_rm_out_of_bounds():
     infile = ignore_empty(infile)
     infile = rm_out_of_bounds(infile)
     for l in infile:
-        assert(int(l[5]) > 0)
-        assert(int(l[5]) < 11)
+        if l.split(',')[5] != 'answer_3\n':
+            assert(int(l.split(',')[5]) > 0)
+            assert(int(l.split(',')[5]) < 11)
         
     
 # ticket 6 - Output the cleansed result data to a new file
@@ -62,3 +63,6 @@ def test_output_script():
     # this writes to stdout, so how would we test? Pipe stdout to a file and read the file?
     assert(1==1)
     
+# main survey script test
+def test_surveymain():
+    assert(1==1)
