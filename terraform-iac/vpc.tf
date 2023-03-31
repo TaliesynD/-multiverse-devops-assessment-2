@@ -62,7 +62,7 @@ resource "aws_vpc_endpoint_route_table_association" "this" {
 }
 
 resource "aws_s3_bucket" "this" {
-    bucket_prefix = "mvws9-eduardo"
+    bucket_prefix = "mvws9-malct"
     force_destroy = true
     tags = {
         Name = "multiverse"
@@ -78,5 +78,6 @@ resource "aws_s3_object" "this" {
     bucket = aws_s3_bucket.this.id
     key = "results.csv"
     source = "${path.module}/results.csv"
+    # etag = filemd5("${path.module}/results.csv")
     etag = filemd5("${path.module}/results.csv")
 }

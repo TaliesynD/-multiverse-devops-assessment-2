@@ -9,11 +9,11 @@ from ticket7 import output_script;
 
 # ticket1 - read CSV
 def test_getfile():
-    assert(isinstance(getfile('inputfile.csv'),(str,list)))
+    assert(isinstance(getfile('results.csv'),(str,list)))
     
 # ticket 2 - Remove duplicates
 def test_rm_dups():
-    infile = getfile('inputfile.csv')
+    infile = getfile('results.csv')
     infile = rm_dups(infile)
     prev = ''
     dupfound = 0
@@ -25,13 +25,13 @@ def test_rm_dups():
 
 # ticket 3 - Ignore empty lines
 def test_ignore_empty():
-    infile = getfile('inputfile.csv')
+    infile = getfile('results.csv')
     infile2 = ignore_empty(infile)
     assert(',,,,,' not in infile2)
     
 # ticket 4 - Capitalise user name fields
 def test_capitalise_names():
-    infile = getfile('inputfile.csv')
+    infile = getfile('results.csv')
     infile = ignore_empty(infile)
     infile = capitalise_names(infile)
     for l in infile:
@@ -43,7 +43,7 @@ def test_capitalise_names():
     
 # ticket 5 - Validate the responses to answer 3
 def test_rm_out_of_bounds():
-    infile = getfile('inputfile.csv')
+    infile = getfile('results.csv')
     infile = ignore_empty(infile)
     infile = rm_out_of_bounds(infile)
     for l in infile:
