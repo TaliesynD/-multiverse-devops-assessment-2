@@ -4,6 +4,9 @@ will be named for the ticket detailing the requirement as per requirements.txt.
 
 
 """
+import os
+cwd = os.getcwd
+
 
 
 from ticket1 import getfile;
@@ -16,7 +19,7 @@ from ticket6 import output_file;
 # call the getfile function to build the array from the input file
 # lines = getfile('c:\Users\MalcBackup\OneDrive\Documents\GitHub\-multiverse-devops-assessment-2\python-survey-app\results.csv')
 # lines = getfile('./results.csv')
-lines = getfile('c:/Users/MalcBackup/OneDrive/Documents/GitHub/-multiverse-devops-assessment-2/python-survey-app/results.csv')
+lines = getfile(cwd + '/results.csv')
 
 
 # print the array line by line
