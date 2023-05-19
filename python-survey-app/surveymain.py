@@ -15,7 +15,9 @@ from ticket6 import output_file;
 
 # call the getfile function to build the array from the input file
 # lines = getfile('c:\Users\MalcBackup\OneDrive\Documents\GitHub\-multiverse-devops-assessment-2\python-survey-app\results.csv')
-lines = getfile('./results.csv')
+# lines = getfile('./results.csv')
+lines = getfile('c:/Users/MalcBackup/OneDrive/Documents/GitHub/-multiverse-devops-assessment-2/python-survey-app/results.csv')
+
 
 # print the array line by line
 # print(*lines)
