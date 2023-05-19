@@ -7,6 +7,7 @@ will be named for the ticket detailing the requirement as per requirements.txt.
 import os
 cwd = os.getcwd()
 fnamei = cwd  + '/results.csv'
+fnameo = cwd  + '/clean_results.csv'
 
 
 
@@ -47,4 +48,4 @@ lines = rm_out_of_bounds(lines)
 # print(*lines)
 
 # write out the clean results
-output_file('clean_results.csv',lines)
+output_file(fnameo,lines)
