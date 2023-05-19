@@ -15,7 +15,7 @@ def capitalise_names(filecontent:list):
         if l.split(',')[0] == 'user_id':
             out_list.append(l)
         else: 
-            m = l.split(',')[0] + ',' + l.split(',')[1].upper() + ',' +  l.split(',')[2].upper() + ',' + l.split(',')[3] + ',' + l.split(',')[4] + ',' + l.split(',')[5]
+            m = l.split(',')[0] + ',' + l.split(',')[1].capitalize() + ',' +  l.split(',')[2].capitalize() + ',' + l.split(',')[3] + ',' + l.split(',')[4] + ',' + l.split(',')[5]
             out_list.append(m)
        
     return out_list
