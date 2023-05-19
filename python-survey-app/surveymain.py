@@ -5,7 +5,7 @@ will be named for the ticket detailing the requirement as per requirements.txt.
 
 """
 import os
-cwd = os.getcwd
+cwd = os.getcwd()
 fnamei = cwd  + '/results.csv'
 
 
