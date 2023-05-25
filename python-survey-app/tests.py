@@ -42,7 +42,7 @@ def test_capitalise_names():
     for l in infile:
         # print('---' + l[1] + '---')
        if l.split(',')[0] != 'user_id':
-            m = str(l.split(',')[1]).upper()
+            m = str(l.split(',')[1]).capitalize()
             n = str(l.split(',')[1])
             assert(n == m)
     
