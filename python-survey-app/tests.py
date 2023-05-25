@@ -6,14 +6,19 @@ from ticket5 import rm_out_of_bounds;
 from ticket6 import output_file;
 from ticket7 import output_script;
 
+import os
+cwd = os.getcwd()
+fnamei = cwd  + '/results.csv'
+fnameo = cwd  + '/clean_results.csv'
+
 
 # ticket1 - read CSV
 def test_getfile():
-    assert(isinstance(getfile('results.csv'),(str,list)))
+    assert(isinstance(getfile(fnamei),(str,list)))
     
 # ticket 2 - Remove duplicates
 def test_rm_dups():
-    infile = getfile('results.csv')
+    infile = getfile(fnamei)
     infile = rm_dups(infile)
     prev = ''
     dupfound = 0
@@ -25,13 +30,13 @@ def test_rm_dups():
 
 # ticket 3 - Ignore empty lines
 def test_ignore_empty():
-    infile = getfile('results.csv')
+    infile = getfile(fnamei)
     infile2 = ignore_empty(infile)
     assert(',,,,,' not in infile2)
     
 # ticket 4 - Capitalise user name fields
 def test_capitalise_names():
-    infile = getfile('results.csv')
+    infile = getfile(fnamei)
     infile = ignore_empty(infile)
     infile = capitalise_names(infile)
     for l in infile:
@@ -43,7 +48,7 @@ def test_capitalise_names():
     
 # ticket 5 - Validate the responses to answer 3
 def test_rm_out_of_bounds():
-    infile = getfile('results.csv')
+    infile = getfile(fnamei)
     infile = ignore_empty(infile)
     infile = rm_out_of_bounds(infile)
     for l in infile:
@@ -56,8 +61,8 @@ def test_rm_out_of_bounds():
 import os.path
 def test_output_file():
     out_line = ['99','a','b','1','2','3']
-    output_file('clean_results.csv',out_line)
-    assert(os.path.isfile('clean_results.csv'))
+    output_file(fnameo,out_line)
+    assert(os.path.isfile(fnameo))
     
 # ticket 7 - Create an output script
 def test_output_script():
