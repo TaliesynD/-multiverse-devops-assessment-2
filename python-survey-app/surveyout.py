@@ -7,6 +7,11 @@ Objectives:
 	●	 The printed output will contain all row data and an appropriate header.
 	●	 Stretch: The printed output will be formatted with fixed length strings.
 '''
+
+import os
+cwd = os.getcwd()
+fnamei = cwd  + '/clean_results.csv'
+
 from ticket7 import output_script;
 # print the clean file
-output_script('clean_results.csv')
+output_script(fnamei)
