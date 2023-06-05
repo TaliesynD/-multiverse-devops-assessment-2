@@ -1,5 +1,5 @@
 resource "aws_lb" "this" {
-    name_prefix = "mvws9"
+    name_prefix = "mvws10"
     internal = false
     load_balancer_type = "application"
     security_groups = [aws_security_group.alb.id]
@@ -20,7 +20,7 @@ resource "aws_lb_listener" "http" {
 }
 
 resource "aws_lb_target_group" "http" {
-    name_prefix = "mvws9"
+    name_prefix = "mvws10"
     port = 80
     protocol = "HTTP"
     vpc_id = aws_vpc.this.id
@@ -28,7 +28,7 @@ resource "aws_lb_target_group" "http" {
 }
 
 resource "aws_launch_template" "this" {
-    name_prefix = "mvws9"
+    name_prefix = "mvws10"
     image_id = data.aws_ami.amazon_linux.id
     instance_type = "t3.micro"
     update_default_version = true
