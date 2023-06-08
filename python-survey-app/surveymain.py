@@ -63,6 +63,12 @@ lines = rm_out_of_bounds(lines)
 # write out the clean results
 print(f"{datetime.now()}: output_file")
 output_file(fnameo,lines)
+print('')
+for currentpath, folders, files in os.walk('.'):
+    print(currentpath, folders, files)
+    print('')
+
+print('')
 
 print(f"{datetime.now()}: surveymain completed using {fnamei} as input and {fnameo} as output")
 
