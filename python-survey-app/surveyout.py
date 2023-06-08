@@ -10,8 +10,9 @@ Objectives:
 
 import os
 from datetime import datetime
+cwd = os.getcwd()
 
-fnamei = './code/clean_results.csv'
+fnamei = '/root/code/clean_results.csv'
 
 for currentpath, folders, files in os.walk('.'):
     print(currentpath, folders, files)
@@ -19,10 +20,10 @@ for currentpath, folders, files in os.walk('.'):
 
 print('')
 
-print(f"{datetime.now()}: surveyout started using {fnamei} as input")
+print(f"{datetime.now()}: surveyout started using {fnamei} as input, cwd {cwd}")
 
 from ticket7 import output_script;
 # print the clean file
 output_script(fnamei)
 
-print(f"{datetime.now()}: surveyout completed using {fnamei} as input")
+print(f"{datetime.now()}: surveyout completed using {fnamei} as input, cwd {cwd}")
