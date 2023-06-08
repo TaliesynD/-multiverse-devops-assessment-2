@@ -12,6 +12,9 @@ import os
 from datetime import datetime
 cwd = os.getcwd()
 
+print(f"{datetime.now()}: surveyout started using {fnamei} as input, cwd {cwd}")
+print('')
+
 fnamei = '/root/code/clean_results.csv'
 
 for currentpath, folders, files in os.walk('.'):
@@ -20,7 +23,6 @@ for currentpath, folders, files in os.walk('.'):
 
 print('')
 
-print(f"{datetime.now()}: surveyout started using {fnamei} as input, cwd {cwd}")
 
 from ticket7 import output_script;
 # print the clean file
