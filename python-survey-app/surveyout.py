@@ -11,7 +11,7 @@ Objectives:
 import os
 from datetime import datetime
 
-fnamei = './clean_results.csv'
+fnamei = './code/clean_results.csv'
 
 for currentpath, folders, files in os.walk('.'):
     print(currentpath, folders, files)
