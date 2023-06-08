@@ -8,9 +8,7 @@ Objectives:
 	●	 Stretch: The printed output will be formatted with fixed length strings.
 '''
 
-import os
-cwd = os.getcwd()
-fnamei = '/root/code/clean_results.csv'
+fnamei = './clean_results.csv'
 
 
 from ticket7 import output_script;
