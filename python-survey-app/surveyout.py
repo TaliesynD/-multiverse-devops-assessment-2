@@ -10,7 +10,8 @@ Objectives:
 
 import os
 cwd = os.getcwd()
-fnamei = cwd  + '/clean_results.csv'
+fnamei = cwd  + '/code/clean_results.csv'
+
 
 from ticket7 import output_script;
 # print the clean file
