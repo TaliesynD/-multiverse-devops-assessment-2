@@ -12,10 +12,10 @@ import os
 from datetime import datetime
 cwd = os.getcwd()
 
+fnamei = '/root/code/clean_results.csv'
+
 print(f"{datetime.now()}: surveyout started using {fnamei} as input, cwd {cwd}")
 print('')
-
-fnamei = '/root/code/clean_results.csv'
 
 for currentpath, folders, files in os.walk('.'):
     print(currentpath, folders, files)
