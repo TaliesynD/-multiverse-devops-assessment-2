@@ -9,8 +9,8 @@ import os
 
 now = datetime.now()
 cwd = os.getcwd()
-fnamei = cwd  + '/results.csv'
-fnameo = cwd  + '/clean_results.csv'
+fnamei = cwd  + '/python-survey-app/results.csv'
+fnameo = cwd  + '/python-survey-app/clean_results.csv'
 
 
 print(f"{now}: surveymain started using {fnamei} as input and {fnameo} as output")
@@ -54,5 +54,6 @@ lines = rm_out_of_bounds(lines)
 # write out the clean results
 output_file(fnameo,lines)
 
+now = datetime.now()
 print(f"{now}: surveymain completed using {fnamei} as input and {fnameo} as output")
 
