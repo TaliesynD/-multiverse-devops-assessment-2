@@ -4,12 +4,16 @@ will be named for the ticket detailing the requirement as per requirements.txt.
 
 
 """
+from datetime import datetime
 import os
+
+now = datetime.now()
 cwd = os.getcwd()
 fnamei = cwd  + '/results.csv'
 fnameo = cwd  + '/clean_results.csv'
 
 
+print(f"{now}: surveymain started using {fnamei} as input and {fnameo} as output")
 
 from ticket1 import getfile;
 from ticket2 import rm_dups;
@@ -49,3 +53,6 @@ lines = rm_out_of_bounds(lines)
 
 # write out the clean results
 output_file(fnameo,lines)
+
+print(f"{now}: surveymain completed using {fnamei} as input and {fnameo} as output")
+
