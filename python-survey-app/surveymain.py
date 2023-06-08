@@ -8,13 +8,14 @@ from datetime import datetime
 import os
 
 cwd = os.getcwd()
-fnamei = cwd  + '/python-survey-app/results.csv'
-fnameo = cwd  + '/python-survey-app/clean_results.csv'
+fnamei = cwd  + '/code/results.csv'
+fnameo = cwd  + '/code/clean_results.csv'
 # os.chdir('./python-survey-app/')
 # cwd = os.getcwd()
 
 for currentpath, folders, files in os.walk('.'):
     print(currentpath, folders, files)
+    print('')
 
 print(f"{datetime.now()}: surveymain started using {fnamei} as input and {fnameo} as output, cwd {cwd}")
 
