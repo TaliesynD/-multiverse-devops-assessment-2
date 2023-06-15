@@ -8,7 +8,7 @@ from datetime import datetime
 import os
 
 cwd = os.getcwd()
-if cwd = "/root"
+if cwd == "/root":
     os.chdir("/root/code")
     cwd = os.getcwd()
     

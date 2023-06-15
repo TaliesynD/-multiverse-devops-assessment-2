@@ -11,7 +11,7 @@ Objectives:
 import os
 from datetime import datetime
 cwd = os.getcwd()
-if cwd = "/root"
+if cwd == "/root":
     os.chdir("/root/code")
     cwd = os.getcwd()
     
