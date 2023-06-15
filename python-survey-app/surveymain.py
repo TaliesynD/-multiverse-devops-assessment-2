@@ -8,6 +8,10 @@ from datetime import datetime
 import os
 
 cwd = os.getcwd()
+if cwd = "/root"
+    os.chdir("/root/code")
+    cwd = os.getcwd()
+    
 fnamei = cwd  + '/results.csv'
 fnameo = cwd  + '/clean_results.csv'
 # os.chdir('./python-survey-app/')

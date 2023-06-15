@@ -11,6 +11,10 @@ Objectives:
 import os
 from datetime import datetime
 cwd = os.getcwd()
+if cwd = "/root"
+    os.chdir("/root/code")
+    cwd = os.getcwd()
+    
 
 fnamei = cwd  + '/clean_results.csv'
 
