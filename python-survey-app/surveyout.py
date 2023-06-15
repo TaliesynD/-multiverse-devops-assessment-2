@@ -12,7 +12,7 @@ import os
 from datetime import datetime
 cwd = os.getcwd()
 
-fnamei = cwd  + '/code/clean_results.csv'
+fnamei = cwd  + '/clean_results.csv'
 
 print(f"{datetime.now()}: surveyout started using {fnamei} as input, cwd {cwd}")
 print('')
