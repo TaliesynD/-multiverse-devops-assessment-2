@@ -8,6 +8,8 @@ from datetime import datetime
 import os
 
 cwd = os.getcwd()
+cwd1 = cwd
+
 if cwd == "/root":
     os.chdir("/root/code")
     cwd = os.getcwd()
@@ -21,7 +23,7 @@ for currentpath, folders, files in os.walk('.'):
     print(currentpath, folders, files)
     print('')
 
-print(f"{datetime.now()}: surveymain started using {fnamei} as input and {fnameo} as output, cwd {cwd}")
+print(f"{datetime.now()}: surveymain started using {fnamei} as input and {fnameo} as output, cwd {cwd}, was {cwd1}")
 
 from ticket1 import getfile;
 from ticket2 import rm_dups;

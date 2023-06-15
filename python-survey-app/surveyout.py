@@ -11,6 +11,8 @@ Objectives:
 import os
 from datetime import datetime
 cwd = os.getcwd()
+cwd1 = cwd
+
 if cwd == "/root":
     os.chdir("/root/code")
     cwd = os.getcwd()
@@ -18,7 +20,7 @@ if cwd == "/root":
 
 fnamei = cwd  + '/clean_results.csv'
 
-print(f"{datetime.now()}: surveyout started using {fnamei} as input, cwd {cwd}")
+print(f"{datetime.now()}: surveyout started using {fnamei} as input, cwd {cwd}, was {cwd1}")
 print('')
 
 for currentpath, folders, files in os.walk('.'):
