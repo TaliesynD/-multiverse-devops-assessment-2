@@ -1,1 +1,1 @@
-collect_ignore = ["surveymain.py"]
+# collect_ignore = ["surveymain.py"]
