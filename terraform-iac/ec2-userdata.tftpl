@@ -35,6 +35,7 @@ region = eu-west-2
 EOT
 cat <<EOT >> /root/mvws9.sh
 #!/bin/bash
+# mvws9.sh - this comment added to force a change on GitHub
 rm -rf /root/code
 mkdir -p /root/code
 aws s3 cp s3://${s3_bucket}/code.zip /tmp/code.zip
