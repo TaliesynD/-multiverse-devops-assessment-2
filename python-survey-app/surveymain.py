@@ -6,8 +6,6 @@ will be named for the ticket detailing the requirement as per requirements.txt.
 """
 from datetime import datetime
 import os
-# is boto3 available?
-import boto3
 
 cwd = os.getcwd()
 cwd1 = cwd
