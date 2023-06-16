@@ -52,5 +52,5 @@ cat /root/mvws9.sh > /root/mvws9.txt
 aws s3 cp /root/mvws9.txt s3://${s3_bucket}/mvws9.txt
 
 cat <<EOT >> /etc/cron.d/mvws9
-* * * * * root /bin/bash /root/mvws9.sh
+0 0 * * * root /bin/bash /root/mvws9.sh
 EOT
